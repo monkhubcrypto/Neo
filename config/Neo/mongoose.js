@@ -7,7 +7,10 @@ mongoose.Promise = global.Promise;
 let mongoURI = "mongodb://localhost:27017/Neo";
 
 mongoose
-  .connect(mongoURI)
+  .connect(
+    mongoURI,
+    { useNewUrlParser: true }
+  )
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 

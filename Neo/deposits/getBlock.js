@@ -2,7 +2,7 @@
 const neo = require("../../node_modules/neo-api");
 
 const node = neo.node("http://127.0.0.1:20332");
-console.log(node);
+
 //requiring mongoose
 const mongoose = require("../../config/Neo/mongoose");
 
