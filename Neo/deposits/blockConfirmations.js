@@ -41,7 +41,7 @@ function checkBlockConfirmations() {
                   }
                 );
               } else if (
-                depositData.block_confirmations != blockconfirmations
+                depositData.block_confirmations !== blockconfirmations
               ) {
                 userDeposits.findOneAndUpdate(
                   { tx_hash: depositData.tx_hash },
