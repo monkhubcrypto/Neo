@@ -14,7 +14,7 @@ function checkTxSuccess(){
                         jsonrpc: "2.0",
                         method: "getrawtransaction",
                         params: [tx.tx_hash, 1],
-                        id:"1"
+                        id:1
                     }
                 }).then(res =>{
                     let txData = res;
@@ -33,7 +33,7 @@ function checkTxSuccess(){
                             jsonrpc:"2.0",
                             method:"getblock",
                             params:[txData.result.Blockhash,1],
-                            id:"1"
+                            id:1
                             }
                         }).then(out =>{
                                     let blockNumber = out.result.index;
