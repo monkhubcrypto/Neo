@@ -12,7 +12,11 @@ var userDepositSchema = new Schema(
     currency: { type: String, required: true },
     confirmed: { type: Boolean, default: false },
     exchange_notified: { type: Boolean, default: false },
-    sent_to_storage: { type: Boolean, default: false },
+    sent_to_cold_storage: {
+      type: String,
+      enum: ["pending", "broadcasted", "success"],
+      default: "pending"
+    },
     block_confirmations: { type: String, default: null }
   },
   { timestamps: true }

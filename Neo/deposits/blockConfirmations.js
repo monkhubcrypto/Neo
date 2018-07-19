@@ -20,12 +20,12 @@ function checkBlockConfirmations() {
             .then(result => {
               let txdata = result;
               let blockconfirmations = txdata.confirmations;
-              if (blockconfirmations > 4) {
+              if (blockconfirmations > 29) {
                 userDeposits.findOneAndUpdate(
                   { tx_hash: depositData.tx_hash },
                   {
                     confirmed: true,
-                    blockconfirmations: "5+",
+                    blockconfirmations: "30+",
                     exchange_notified: false
                   },
                   function(error, result) {
@@ -54,7 +54,7 @@ function checkBlockConfirmations() {
                       console.log(error);
                     } else {
                       console.log(
-                        "Your deposit will be confirmed after 5 network confirmations"
+                        "Your deposit will be confirmed after 30 network confirmations"
                       );
                     }
                   }
