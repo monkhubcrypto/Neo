@@ -17,7 +17,8 @@ var userWithdrawRequestSchema = new Schema(
 
     exchange_notified: { type: Boolean, default: false },
     tx_hash: { type: String, default: null },
-    fee: { type: String, default: null }
+    fee: { type: String, default: null },
+    exchange_status: { type: String }
   },
   { timestamps: true }
 );

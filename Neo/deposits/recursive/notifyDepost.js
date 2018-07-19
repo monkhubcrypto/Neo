@@ -1,9 +1,9 @@
 const userDeposits = require("../../models/userDeposits");
-const exchangeAPI = require("../../../api/exchangeAPI/exchangeAPI");
+const exchangeAPI = require("../../../API/exchangeAPI/exchangeAPI");
 
-const config = require("../../../config/NEO/config");
+const config = require("../../../globalConfig/Neo/config");
 
-const globalconfig = require("../../../config/globalConfig");
+const globalconfig = require("../../../globalConfig/globalConfig");
 
 notify();
 

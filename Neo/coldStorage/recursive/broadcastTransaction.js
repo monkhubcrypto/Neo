@@ -1,18 +1,18 @@
 //requiring Neo npm library
-const neo = require("../../node_modules/neo-api");
+const neo = require("../../../node_modules/neo-api");
 
 const node = neo.node("http://127.0.0.1:20332");
 
 //requiring mongoose
-const mongoose = require("../../config/Neo/mongoose");
+const mongoose = require("../../../globalConfig/mongoose");
 
 //requiring user model
-const userWithdrawRequest = require("../models/userWithdrawRequest");
+const userWithdrawRequest = require("../../models/userWithdrawRequest");
 
-const userDeposits = require("../models/userDeposits");
-const coldStorageDetails = require("../models/coldStorageDeposits");
+const userDeposits = require("../../models/userDeposits");
+const coldStorageDetails = require("../../models/coldStorageDeposits");
 
-const config = require("../../../config/NEO/config");
+const config = require("../../../globalConfig/Neo/config");
 const request = require("request");
 
 transferFunds();

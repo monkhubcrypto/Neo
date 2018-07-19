@@ -1,14 +1,14 @@
 //requiring Neo npm library
-const neo = require("../../node_modules/neo-api");
+const neo = require("neo-api");
 
 const node = neo.node("http://127.0.0.1:20332");
 
 //requiring mongoose
-const mongoose = require("../../config/Neo/mongoose");
+const mongoose = require("../../../globalConfig/mongoose");
 
 //requiring user model
-const blockData = require("../models/blockData");
-const transactions = require("../models/transactions");
+const blockData = require("../../models/blockData");
+const transactions = require("../../models/transactions");
 storeTransactions();
 
 function storeTransactions() {

@@ -1,4 +1,4 @@
-let config = require("../../../config/neo/config");
+let config = require("../../../globalConfig/Neo/config");
 
 let userDeposits = require("../../models/userDeposits");
 
@@ -11,7 +11,7 @@ function checkBlockConfirmations() {
   userDeposits.find({ confirmed: false }, function(error, result) {
     if (error) {
       console.log(error);
-      setTimeOut(checkBlockConfirmations, 3000);
+      setTimeout(checkBlockConfirmations, 3000);
     } else {
       if (result.length > 0) {
         for (let depositData of result) {
@@ -65,9 +65,9 @@ function checkBlockConfirmations() {
               console.log(err);
             });
         }
-        setTimeOut(checkBlockConfirmations, 3000);
+        setTimeout(checkBlockConfirmations, 3000);
       } else {
-        setTimeOut(checkBlockConfirmations, 3000);
+        setTimeout(checkBlockConfirmations, 3000);
       }
     }
   });
